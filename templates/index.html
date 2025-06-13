@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📚Readify~AI Book Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📚Readify</h1>
+    <p>Find your next read!</p>
+
+    <form id="searchForm">
+      <input type="text" id="query" placeholder="Search for a book..." required>
+      <select id="filter_by">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="genre">Genre</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="results"></div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
